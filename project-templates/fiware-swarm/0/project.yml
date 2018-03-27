@@ -1,8 +1,8 @@
-name: Swarm
-description: Default Swarm template
+name: Fiware Swarm
+description: Fiware Swarm template
 stacks:
-  - name: portainer
-    templateId: 'community:infra*portainer'
+  - name: fiwarelab-portainer
+    templateId: 'fiwarelab-swarm-catalog:infra*fiwarelab-portainer'
   - name: swarm
     templateId: 'community:infra*swarm'
   - name: network-services
