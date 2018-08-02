@@ -8,7 +8,7 @@ portainer:
   - /config
 
 ui:
-  image: portainer/portainer:develop
+  image: portainer/portainer:linux-amd64-1.17.1
   command: --no-auth --external-endpoints=/config/config.json --sync-interval=5s -p :80
   volumes_from:
   - portainer
