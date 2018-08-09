@@ -9,7 +9,10 @@ portainer:
 
 ui:
   image: portainer/portainer:linux-amd64-1.17.1
-  command: --no-auth --external-endpoints=/config/config.json --sync-interval=5s -p :80
+  command: >
+    --no-auth --external-endpoints=/config/config.json --sync-interval=5s -p :80
+    --templates "https://raw.githubusercontent.com/smartsdk/smartsdk-recipes/master/portainer/templates.json"
+    --logo "https://forge.fiware.org/plugins/mediawiki/wiki/fiware/images/a/a5/FI-WARE_logo.png"
   volumes_from:
   - portainer
   net: container:portainer
